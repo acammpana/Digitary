@@ -1,0 +1,19 @@
+@(userForm : Form[User])
+@import helper._
+@import views.html.partials._userFormFields
+
+@layout("Edit User") {
+
+    <h1>Edit User</h1>
+    @helper.form(action = helper.CSRF(routes.UserController.updateUser())) {
+        @_userFormFields(userForm)
+
+
+        <button type="submit" class="btn btn-primary">
+            Save User</button>
+
+        <button class="btn btn-primary" onclick="sendPutRequest('userUpdateForm','@routes.UserController.edit(userForm.get().getId())')">
+            Edit User</button>
+    }
+
+}

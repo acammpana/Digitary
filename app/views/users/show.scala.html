@@ -1,0 +1,16 @@
+@(user : User)
+
+@layout(user.getName()) {
+
+    <h2>@user.getName()</h2>
+
+    <p>Email :  @user.getEmail()</p>
+    <p>Address 1 :  @user.getAddress1()</p>
+    <p>Address 2 :  @user.getAddress2()</p>
+    <p>Town/City :  @user.getTown()</p>
+    <p>Post Code :  @user.getPostcode()</p>
+    <p>Country :  @user.getCountry()</p>
+    <p>Phone :  @user.getPhone()</p>
+    <a class="btn btn-primary" href="@routes.UserController.edit(user.getId())">Edit User</a>
+    <a class="btn btn-danger" href="@routes.UserController.destroy(user.getId())">Delete User</a>
+}

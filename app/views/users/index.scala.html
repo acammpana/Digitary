@@ -1,0 +1,11 @@
+@(users : List[User])
+
+@layout("All Users") {
+    <h1>All Users</h1>
+
+    @for(user <- users) {
+        @user.getId() -->  <a class="btn btn-link" href="@routes.UserController.show(user.getId())">@user.getName()</a> <br>
+    }
+}
+
+

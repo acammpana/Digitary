@@ -1,0 +1,11 @@
+@(userForm : Form[User])
+
+@helper.inputText(userForm("id"), 'class -> "form-control")
+@helper.inputText(userForm("name"), 'class -> "form-control")
+@helper.inputText(userForm("email"), 'class -> "form-control")
+@helper.inputText(userForm("address1"), 'class -> "form-control")
+@helper.inputText(userForm("address2"), 'class -> "form-control")
+@helper.inputText(userForm("town"), 'class -> "form-control")
+@helper.inputText(userForm("postcode"), 'class -> "form-control")
+@helper.inputText(userForm("country"), 'class -> "form-control")
+@helper.inputText(userForm("phone"), 'class -> "form-control")

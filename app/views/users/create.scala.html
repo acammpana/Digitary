@@ -1,0 +1,16 @@
+@(userForm : Form[User])
+@import helper._
+@import views.html.partials._userFormFields
+
+@layout("Create User") {
+    <h1>Create User</h1>
+        @helper.form(action = helper.CSRF(routes.UserController.save())) {
+         @_userFormFields(userForm)
+
+            <button type="submit" class="btn btn-success">
+                <i class="glyphicon glyphicon-plus"></i>
+                Create User</button>
+        }
+
+
+}
