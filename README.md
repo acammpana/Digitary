@@ -14,40 +14,32 @@ sbt run
 
 And then go to http://localhost:9000 to see the running web application.
 
-## Controllers
+## API Methods
 
-There are several demonstration files available in this template.
 
-- HomeController.java:
+- /users
 
-  Shows how to handle simple HTTP requests.
+ Get an listing of all users
 
-- AsyncController.java:
+- /users/create
 
-  Shows how to do asynchronous programming when handling a request.
+  Prepare to create a user
 
-- CountController.java:
+- /users/:id
 
-  Shows how to inject a component into a controller and use the component when
-  handling requests.
+  Get a particular user
 
-## Components
+- /users/edit/:id
 
-- Module.java:
+  Get a particular user to modify
+  
+- /users/edit
 
-  Shows how to use Guice to bind all the components needed by your application.
+  Save a modified user
+  
 
-- Counter.java:
+- /users/create
 
-  An example of a component that contains state, in this case a simple counter.
-
-- ApplicationTimer.java:
-
-  An example of a component that starts when the application starts and stops
-  when the application stops.
-
-## Filters
-
-- ExampleFilter.java
-
-  A simple filter that adds a header to every response.
+  Save a new user
+  
+  
